@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Blood Donation Registration Form</title>
+</head>
+<body>
+
+    <h1 align="center">BLOOD DONOR REGISTRATION FORM</h1>
+
+    <form action="#" method="post">
+
+        <fieldset>
+            <legend><b>1. Personal Details</b></legend>
+
+            Full Name:
+            <input type="text" name="fullname" size="40">
+            <br><br>
+
+            Father's Name:
+            <input type="text" name="fathername" size="40">
+            <br><br>
+
+            Gender:
+            <input type="radio" name="gender" value="male"> Male
+            <input type="radio" name="gender" value="female"> Female
+            <input type="radio" name="gender" value="other"> Other
+            <br><br>
+
+            Date of Birth:
+            <input type="text" name="dob" size="10"> (DD-MM-YYYY)
+            <br><br>
+
+            Age:
+            <input type="text" name="age" size="5">
+            <br><br>
+
+            Blood Group:
+            <select name="bloodgroup">
+                <option value="">-- Select --</option>
+                <option value="A+">A+</option>
+                <option value="A-">A-</option>
+                <option value="B+">B+</option>
+                <option value="B-">B-</option>
+                <option value="AB+">AB+</option>
+                <option value="AB-">AB-</option>
+                <option value="O+">O+</option>
+                <option value="O-">O-</option>
+            </select>
+            <br><br>
+
+            Weight (kg):
+            <input type="text" name="weight" size="5">
+            <br><br>
+
+            Occupation:
+            <input type="text" name="occupation" size="40">
+        </fieldset>
+
+        <br>
+
+        <fieldset>
+            <legend><b>2. Contact Details</b></legend>
+
+            Mobile Number:
+            <input type="text" name="mobile" size="15">
+            <br><br>
+
+            Email ID:
+            <input type="text" name="email" size="40">
+            <br><br>
+
+            Address:
+            <textarea name="address" rows="3" cols="50"></textarea>
+            <br><br>
+
+            City:
+            <input type="text" name="city" size="20">
+            <br><br>
+
+            State:
+            <input type="text" name="state" size="20">
+            <br><br>
+
+            Pin Code:
+            <input type="text" name="pincode" size="10">
+        </fieldset>
+
+        <br>
+
+        <fieldset>
+            <legend><b>3. Donation Details</b></legend>
+
+            Have you donated blood before?
+            <input type="radio" name="donatedbefore" value="yes"> Yes
+            <input type="radio" name="donatedbefore" value="no"> No
+            <br><br>
+
+            If yes, date of last donation:
+            <input type="text" name="lastdonationdate" size="10"> (DD-MM-YYYY)
+            <br><br>
+
+            Preferred donation type:
+            <select name="donationtype">
+                <option value="whole blood">Whole Blood</option>
+                <option value="plasma">Plasma</option>
+                <option value="platelets">Platelets</option>
+            </select>
+        </fieldset>
+
+        <br>
+
+        <fieldset>
+            <legend><b>4. Health Screening Questions</b></legend>
+
+            Are you currently in good health?
+            <input type="radio" name="q1" value="yes"> Yes
+            <input type="radio" name="q1" value="no"> No
+            <br><br>
+
+            Have you had a fever, cold, or flu in the last 2 weeks?
+            <input type="radio" name="q2" value="yes"> Yes
+            <input type="radio" name="q2" value="no"> No
+            <br><br>
+
+            Have you consumed alcohol in the last 24 hours?
+            <input type="radio" name="q3" value="yes"> Yes
+            <input type="radio" name="q3" value="no"> No
+            <br><br>
+
+            Have you had any surgery in the last 6 months?
+            <input type="radio" name="q4" value="yes"> Yes
+            <input type="radio" name="q4" value="no"> No
+            <br><br>
+
+            Do you have any of the following conditions? (Select all that apply)
+            <br>
+            <input type="checkbox" name="conditions" value="diabetes"> Diabetes<br>
+            <input type="checkbox" name="conditions" value="bloodpressure"> High Blood Pressure<br>
+            <input type="checkbox" name="conditions" value="heart"> Heart Disease<br>
+            <input type="checkbox" name="conditions" value="hiv"> HIV / Hepatitis<br>
+            <input type="checkbox" name="conditions" value="none"> None of the above
+        </fieldset>
+
+        <br>
+
+        <fieldset>
+            <legend><b>5. Declaration and Consent</b></legend>
+
+            I declare that the information given above is true and correct.
+            <input type="checkbox" name="declaration">
+            <br><br>
+
+            I consent to donate blood and understand it is voluntary.
+            <input type="checkbox" name="consent">
+            <br><br>
+
+            Signature:
+            <input type="text" name="signature" size="40">
+            <br><br>
+
+            Date:
+            <input type="text" name="signaturedate" size="10">
+        </fieldset>
+
+        <br>
+
+        <div align="center">
+            <input type="submit" value="Submit Registration">
+            &nbsp;&nbsp;&nbsp;
+            <input type="reset" value="Clear Form">
+        </div>
+
+    </form>
+
+</body>
+</html>
