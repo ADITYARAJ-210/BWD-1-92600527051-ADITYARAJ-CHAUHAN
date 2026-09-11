@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lab 10</title>
+    <style>
+        /* Styling the page body */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+            background-color: #f4f4f9;
+        }
+
+        /* Container to keep boxes together */
+        .container {
+            position: relative;
+            height: 300px;
+            margin-top: 20px;
+        }
+
+        /* Base styling for all boxes */
+        .box {
+            width: 150px;
+            height: 150px;
+            position: absolute; /* Position must be set for z-index to work */
+            color: white;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 8px;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Box 1: Bottom Layer */
+        .box-1 {
+            background-color: #e74c3c; /* Red */
+            top: 20px;
+            left: 25px;
+            z-index: 1; /* Lowest z-index */
+        }
+
+        /* Box 2: Top Layer */
+        .box-2 {
+            background-color: #3498db; /* Blue */
+            top: 60px;
+            left: 60px;
+            z-index: 3; /* Highest z-index (Appears on top) */
+        }
+
+        /* Box 3: Middle Layer */
+        .box-3 {
+            background-color: #2ecc71; /* Green */
+            top: 100px;
+            left: 100px;
+            z-index: 2; /* Middle z-index */
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Understanding CSS Z-Index</h1>
+    <p>
+        The <strong>z-index</strong> property determines which elements overlap on top of others. 
+        A higher number sits on top of a lower number.
+    </p>
+
+    <div class="container">
+        <!-- Box 1 with z-index: 1 -->
+        <div class="box box-1">
+            Box 1 <br> (z-index: 1)
+        </div>
+
+        <!-- Box 2 with z-index: 3 -->
+        <div class="box box-2">
+            Box 2 <br> (z-index: 3)
+        </div>
+
+        <!-- Box 3 with z-index: 2 -->
+        <div class="box box-3">
+            Box 3 <br> (z-index: 2)
+        </div>
+    </div>
+
+</body>
+</html>

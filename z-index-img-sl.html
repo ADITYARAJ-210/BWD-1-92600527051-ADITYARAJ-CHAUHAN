@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pure HTML & CSS Image Slider</title>
+    
+    <style>
+        /* Reset basic margins */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #f0f0f0;
+        }
+
+        /* 1. Main Slider Container */
+        .slider-container {
+            position: relative;
+            width: 800px;
+            height: 450px;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Hide radio inputs completely */
+        .slider-container input[type="radio"] {
+            display: none;
+        }
+
+        /* 2. Slide Setup */
+        .slide {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            transition: opacity 0.6s ease-in-out;
+            z-index: 1; /* Lowest z-index layer */
+        }
+
+        .slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* 3. Text Overlay on Top of Image */
+        .slide-text {
+            position: absolute;
+            bottom: 40px;
+            left: 40px;
+            background-color: rgba(0, 0, 0, 0.7);
+            color: #ffffff;
+            padding: 15px 20px;
+            border-radius: 5px;
+            max-width: 400px;
+            z-index: 10; /* Higher z-index to place text above image */
+        }
+
+        .slide-text h2 {
+            font-size: 22px;
+            margin-bottom: 5px;
+        }
+
+        .slide-text p {
+            font-size: 14px;
+        }
+
+        /* 4. Navigation Control Dots at the Bottom */
+        .navigation {
+            position: absolute;
+            bottom: 15px;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            z-index: 20; /* Highest z-index to stay clickable over all elements */
+        }
+
+        .nav-dot {
+            width: 15px;
+            height: 15px;
+            background-color: rgba(255, 255, 255, 0.6);
+            border-radius: 50%;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .nav-dot:hover {
+            background-color: #ffffff;
+        }
+
+        /* 5. Pure CSS Logic for Showing Slides */
+        #slide1:checked ~ .s1,
+        #slide2:checked ~ .s2,
+        #slide3:checked ~ .s3 {
+            opacity: 1;
+            z-index: 2; /* Move active image to top of image stack */
+        }
+
+        /* Highlight active navigation dot */
+        #slide1:checked ~ .navigation label[for="slide1"],
+        #slide2:checked ~ .navigation label[for="slide2"],
+        #slide3:checked ~ .navigation label[for="slide3"] {
+            background-color: #ffffff;
+            transform: scale(1.2);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Main Slider Box -->
+    <div class="slider-container">
+
+        <!-- Hidden Radio Inputs (Used as state switchers without JS) -->
+        <input type="radio" name="slider" id="slide1" checked>
+        <input type="radio" name="slider" id="slide2">
+        <input type="radio" name="slider" id="slide3">
+
+        <!-- Slide 1 -->
+        <div class="slide s1">
+            <img src="https://picsum.photos/id/1018/800/450" alt="Mountain View">
+            <div class="slide-text">
+                <h2>Mountain Valley</h2>
+                <p>Enjoy the peaceful mountain view and fresh air.</p>
+            </div>
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="slide s2">
+            <img src="https://picsum.photos/id/1015/800/450" alt="River Stream">
+            <div class="slide-text">
+                <h2>River Stream</h2>
+                <p>Listen to the calming sounds of the flowing river.</p>
+            </div>
+        </div>
+
+        <!-- Slide 3 -->
+        <div class="slide s3">
+            <img src="https://picsum.photos/id/1019/800/450" alt="Ocean Coast">
+            <div class="slide-text">
+                <h2>Ocean Coast</h2>
+                <p>Watch the sunset over the tranquil ocean waters.</p>
+            </div>
+        </div>
+
+        <!-- Navigation Buttons (Clickable Labels linked to Radio Inputs) -->
+        <div class="navigation">
+            <label for="slide1" class="nav-dot"></label>
+            <label for="slide2" class="nav-dot"></label>
+            <label for="slide3" class="nav-dot"></label>
+        </div>
+
+    </div>
+
+</body>
+</html>
