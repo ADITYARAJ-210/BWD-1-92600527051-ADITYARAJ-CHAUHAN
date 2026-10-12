@@ -1,0 +1,84 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login and Registration Page</title>
+    <link rel="stylesheet" href="/login-2.css">
+</head>
+<body>
+
+    <div class="container">
+
+        <section id="login">
+            <h1>Login Page</h1>
+
+            <form action="#" method="get">
+                <input type="email" placeholder="Enter Email" required>
+
+                <input type="password" placeholder="Enter Password" required>
+
+                <button type="submit">Login</button>
+            </form>
+
+            <p><a href="#forgot">Forgot Password?</a></p>
+
+            <p>Don't have an account?
+                <a href="#register">Register Here</a>
+            </p>
+        </section>
+
+        <section id="register">
+            <h1>Registration Page</h1>
+
+            <form action="#" method="get">
+                <input type="text" placeholder="Full Name" required>
+
+                <input type="email" placeholder="Enter Email" required>
+
+                <input type="password" placeholder="Create Password"
+                       minlength="6" required>
+
+                <input type="password" placeholder="Confirm Password"
+                       minlength="6" required>
+
+                <button type="submit">Register</button>
+            </form>
+
+            <p>Already have an account?
+                <a href="#login">Login Here</a>
+            </p>
+        </section>
+
+        <section id="forgot">
+            <h1>Forgot Password</h1>
+
+            <p>Enter your registered email address.</p>
+
+            <form action="#" method="get">
+                <input type="email" placeholder="Enter Email" required>
+
+                <button type="submit">Reset Password</button>
+            </form>
+
+            <p><a href="#login">Back to Login</a></p>
+        </section>
+
+        <section id="logout">
+            <h1>Logout</h1>
+            <p>You have reached the logout page.</p>
+            <p><a href="#login">Back to Login</a></p>
+        </section>
+
+        <footer>
+            <a href="#login">Login</a> |
+            <a href="#register">Register</a> |
+            <a href="#forgot">Forgot Password</a> |
+            <a href="#logout">Logout</a>
+        </footer>
+
+    </div>
+
+</body>
+</html>
