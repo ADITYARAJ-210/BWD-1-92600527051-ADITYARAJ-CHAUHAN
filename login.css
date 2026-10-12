@@ -1,0 +1,42 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: #030164;
+    background-image: url(/login/images/images\ \(1\).jpg);
+}
+.login{
+    width: 15%;
+    min-height: 350px;
+    border: 2px solid black;
+    border-radius: 10px;
+    margin-left: 41%;
+    margin-top: 250px;
+    position: absolute;
+    background-color:#2D7495;
+}
+.title {
+    width: 100%;
+    height: 50px;
+    font-size: x-large;
+    align-content: center;
+    margin-left: 35%;
+    margin-top: 50px;
+}
+.login-body {
+    margin-top: 60px;
+    margin-left: 20%;
+}
+input {
+    margin-bottom: 15px;
+}
+#submit {
+    width: 40%;
+    position: absolute;
+    left: 88px;
+}
+.input {
+    margin-top: 5px;
+}
+
