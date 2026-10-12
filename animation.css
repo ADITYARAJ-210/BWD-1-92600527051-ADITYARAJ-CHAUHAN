@@ -1,0 +1,18 @@
+.box{
+    margin: 0%;
+    width: 400px;
+    height: 400px;
+    background-color: chocolate;
+    animation-name: box-animation;
+    animation-duration: 5s;
+    
+}
+@keyframes box-animation {
+    0% {background-color: blueviolet;}
+    10% {background-color: brown;}
+    20% {background-color: chocolate;}
+    30% {background-color: violet;}
+    40% {background-color: blueviolet;}
+    90% {background-color: chocolate;}
+    100% {background-color: brown;}
+}
