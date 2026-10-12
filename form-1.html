@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sign Up Form</title>
+</head>
+<body>
+
+    <center>
+        <h2>Create an Account</h2>
+        <p><small>Please complete the fields below to register.</small></p>
+    </center>
+    
+    <hr size="1" width="100%">
+
+    <form action="/submit-form" method="POST">
+        
+        <!-- Name -->
+        <p>
+            <label for="name"><strong>Full Name:</strong></label><br>
+            <input type="text" name="name" placeholder="John Doe" size="40" >
+        </p>
+
+        <!-- Email -->
+        <p>
+            <label for="email"><strong>Email Address:</strong></label><br>
+            <input type="email" name="email" placeholder="example@mail.com" size="40" >
+        </p>
+
+        <!-- Phone Number -->
+        <p>
+            <label for="phone"><strong>Phone Number:</strong></label><br>
+            <input type="number" name="phone" placeholder="123-456-7890" size="40">
+        </p>
+
+        <!-- Address -->
+        <p>
+            <label for="address"><strong>Address:</strong></label><br>
+            <textarea name="address" rows="4" cols="40" placeholder="Enter your full residential address..."></textarea>
+        </p>
+
+        <!-- Password -->
+        <p>
+            <label for="password"><strong>Password:</strong></label><br>
+            <input type="password" name="password" size="40" ><br>
+            <small>Must be at least 8 characters.</small>
+        </p>
+
+        <!-- Confirm Password -->
+        <p>
+            <label for="confirm_password"><strong>Confirm Password:</strong></label><br>
+            <input type="password" name="confirm_password" size="40">
+        </p>
+
+        <hr size="1" width="100%">
+
+        <!-- Submit Button -->
+        <p>
+            <input type="submit" value="Register Account">
+            <input type="reset" value="Clear Form">
+        </p>
+
+    </form>
+
+</body>
+</html>
